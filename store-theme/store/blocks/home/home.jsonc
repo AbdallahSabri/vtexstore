@@ -7,7 +7,7 @@
       // "flex-layout.row#deals",
       // "__fold__",
       // "rich-text#shelf-title",
-      // "flex-layout.row#shelf",
+       "flex-layout.row#shelf",
       // "info-card#home",
       // "rich-text#question",
       // "rich-text#link",

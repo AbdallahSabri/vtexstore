@@ -1,29 +1,24 @@
 import React from 'react'
 import { SliderLayout } from 'vtex.slider-layout'
 import './styles.css'
-
 interface Props {
   campaignData: CampaignApiResponse
+  onBannerClick?: () => void
 }
-
-const Banner: React.FC<Props> = ({ campaignData }) => {
+const Banner: React.FC<Props> = ({ campaignData, onBannerClick }) => {
   const { campaignNotification, campaignUser } = campaignData
-
   const getBannerImages = () => {
     if (campaignNotification.banner) {
       const images = []
-
       if (campaignNotification.banner.image) {
         images.push(campaignNotification.banner.image)
       }
-
       if (
         campaignNotification.banner.webImages &&
         campaignNotification.banner.webImages.length > 0
       ) {
         images.push(...campaignNotification.banner.webImages)
       }
-
       if (
         images.length === 0 &&
         campaignNotification.banner.mobileImages &&
@@ -31,16 +26,14 @@ const Banner: React.FC<Props> = ({ campaignData }) => {
       ) {
         images.push(...campaignNotification.banner.mobileImages)
       }
-
       return images.length > 0 ? images : []
     }
-
     return []
   }
-
   const bannerImages = getBannerImages()
-
-  const  handleImageClick = () => {
+  const handleImageClick = () => {
+    onBannerClick?.()
+    
     if (campaignUser?.productUrl) {
       const url = campaignUser.productUrl.startsWith('http')
         ? campaignUser.productUrl
@@ -48,7 +41,6 @@ const Banner: React.FC<Props> = ({ campaignData }) => {
       window.location.href = url
     }
   }
-
   return (
     <div className="coretava-banner">
       <div className="banner-slider">
@@ -89,5 +81,4 @@ const Banner: React.FC<Props> = ({ campaignData }) => {
     </div>
   )
 }
-
 export default Banner 
