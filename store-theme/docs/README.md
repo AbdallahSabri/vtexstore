@@ -7,6 +7,29 @@ Our boilerplate theme to create stores in the VTEX IO platform.
 ## Preview
 ![store-theme-default](https://user-images.githubusercontent.com/1354492/63937047-e8d81c80-ca37-11e9-86fc-61e88847bbfb.png)
 
+## Custom Features
+
+### Coretava Banner Integration
+
+This store theme includes custom Coretava banner functionality with advanced tracking capabilities:
+
+- **Dynamic Banner Loading**: Fetches campaign data from Coretava API based on placement ID
+- **Impression Tracking**: Automatically tracks banner views and clicks using Intersection Observer API
+- **Customer Identification**: Integrates with customer ID management for personalized campaigns
+- **NoSSR Support**: Uses VTEX's NoSSR wrapper for client-side rendering
+
+#### Banner Props
+
+- `placementId`: Unique identifier for the banner placement
+- `appId`: Application identifier for API authentication
+
+#### Tracking Features
+
+- View impressions triggered when banner is >= 50% visible
+- Click tracking for user interactions
+- Session-based deduplication to prevent duplicate impressions
+- Global context support (product, brand, category, city)
+
 ## Tutorial
 To understand how things work check our tutorial [Build a store using VTEX IO](https://vtex.io/docs/getting-started/build-stores-with-store-framework/1/)
 
@@ -34,12 +57,17 @@ Store GraphQL is a middleware to access all VTEX APIs.
 - [Search Result](https://github.com/vtex-apps/search-result/blob/master/docs/README.md)
 - [Product Details](https://github.com/vtex-apps/product-details/blob/master/docs/README.md)
 - [Store Components](https://github.com/vtex-apps/store-components/blob/master/docs/README.md)
-- [Order Placed](https://github.com/vtex-apps/order-placed/blob/master/docs/README.md) 
+- [Order Placed](https://github.com/vtex-apps/order-placed/blob/master/docs/README.md)
+
+### Custom Components
+
+- **Coretava Banner**: Dynamic advertising banner with impression and click tracking
+- **Coretava Campaign**: Campaign management and display functionality
 
 ### Store Pixel Apps
 
- - [Facebook Pixel](https://github.com/vtex-apps/facebook-pixel/blob/master/docs/README.md)
- - [Google Tag Manager](https://github.com/vtex-apps/google-tag-manager/blob/master/docs/README.md)
+- [Facebook Pixel](https://github.com/vtex-apps/facebook-pixel/blob/master/docs/README.md)
+- [Google Tag Manager](https://github.com/vtex-apps/google-tag-manager/blob/master/docs/README.md)
 
 ## Contributing
 
