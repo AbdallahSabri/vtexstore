@@ -1,0 +1,12 @@
+{
+    "store.custom#campaign": {
+        "blocks": [
+            "coretava-campaign#m"
+        ]
+    },
+    "coretava-campaign#m": {
+        "blocks": [
+            "search-result-layout"
+        ]
+    }
+}

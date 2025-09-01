@@ -1,0 +1,20 @@
+{
+    "coretava-banner": {
+        "component": "CoretavaBanner"
+    },
+    "coretava-campaign": {
+        "component": "CoretavaCampaign",
+        "allowed": ["search-result-layout", "filter-navigator.v3"]
+    },
+    "filter-navigator.v3": {
+        "props": {
+            "initiallyCollapsed":false,
+            "openFiltersMode": "many",
+            "truncateFilters":true,
+            "showClearByFilter":true,
+            "showClearAllFiltersOnDesktop":true,
+            "showQuantityBadgeOnMobile":true,
+            "layout": "desktop"
+        }
+    }
+}
